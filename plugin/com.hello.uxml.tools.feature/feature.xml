@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.hello.uxml.tools.feature"
+      label="Uxml Editor Feature"
+      version="3.1.8"
+      provider-name="Hello"
+      application="org.eclipse.ui.ide.workbench">
+
+   <description url="http://www.hello.com/~ferhat/hello/uxmledit5/eclipse/description.html">
+      UXML Editor provides visual editing and code generator support
+for UI markup.
+   </description>
+
+   <copyright url="http://www.hello.com/~ferhat/hello/uxmledit5/eclipse/copyright.html">
+      Copyright 2014 Hello. All rights reserved.
+   </copyright>
+
+   <license url="http://www.hello.com/~ferhat/hello/uxmledit5/eclipse/license.html">
+      Don&apos;t be evil.
+   </license>
+
+   <url>
+      <update label="Uxml Update Server" url="http://www.hello.com/~ferhat/hello/uxmledit5/eclipse"/>
+   </url>
+
+   <plugin
+         id="com.hello.uxml.tools.ui"
+         download-size="0"
+         install-size="0"
+         version="3.1.8"
+         unpack="false"/>
+
+</feature>

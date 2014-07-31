@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UXML Tools
+Bundle-SymbolicName: com.hello.uxml.tools.ui;singleton:=true
+Bundle-Version: 3.1.8
+Bundle-Activator: com.hello.uxml.tools.ui.Activator
+Bundle-Vendor: HELLO
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.ide,
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/guava-r08.jar,
+ .

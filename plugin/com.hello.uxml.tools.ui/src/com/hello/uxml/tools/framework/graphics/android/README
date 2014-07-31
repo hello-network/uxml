@@ -1,0 +1,2 @@
+This directory contains android platform specific code. The class path should point
+to this directory to target the android platform.

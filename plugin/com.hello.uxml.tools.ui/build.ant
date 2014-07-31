@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project name="com.hello.eclipse.uxmleditor" default="jar">
+  <target name="jar">
+    <jar destfile="../../out/eclipse/plugins/com.hello.uxml.tools.ui_3.1.8.jar"
+        manifest="./META-INF/MANIFEST.MF">
+      <fileset dir="bin" />
+      <fileset dir=".">
+        <include name="plugin.xml"/>
+        <include name="META-INF/MANIFEST.MF"/>
+        <include name="icons/uxmlfile.gif"/>
+      </fileset>
+      <zipfileset src="lib/guava-r08.jar" includes="**/*.class"/>
+    </jar>
+  </target>
+</project>

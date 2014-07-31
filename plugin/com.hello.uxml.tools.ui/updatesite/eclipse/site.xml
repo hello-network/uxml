@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<site>
+  <description url="http://www.hello.com/~editorout/www/hello/editorout">
+    UXML Editor Update for Eclipse 3.7
+  </description>
+  <feature url="features/com.hello.uxml.tools.feature.3.0.0.1007.jar">
+    <category name="UXMLED"/>
+  </feature>
+  <category-def label="UXML Editor" name="UXMLED">
+    <description>This category contains all available versions of UXML Editor.
+    </description>
+  </category-def>
+</site>

@@ -1,0 +1,8 @@
+name: uxml
+version: 0.9.0
+description: hello core shared library
+dependencies:
+  browser: any
+  unittest: any
+
+

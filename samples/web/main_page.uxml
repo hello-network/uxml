@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Application name="MainPage">
+  <Label text="hello World"></Label>
+</Application>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <!-- Define Editor for .UXML file type -->
+  <extension point="org.eclipse.ui.editors">
+    <editor
+          class="com.hello.uxml.tools.ui.editor.UXMLEditor"
+          contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+          extensions="uxml,hts"
+          icon="icons/uxmlfile.gif"
+          id="com.hello.uxml.tools.ui.editors.UXMLEditor"
+          name="UXML Editor">
+    </editor>
+ </extension>
+
+  <!-- Project Property Page definition -->
+  <extension point="org.eclipse.ui.propertyPages">
+    <page
+        id="com.hello.uxml.tools.ui.internal.properties.UXMLProjectSettingsPage"
+         name="UXML Code Generation"
+         class="com.hello.uxml.tools.ui.internal.properties.UXMLProjectSettingsPage">
+       <enabledWhen>
+         <or>
+           <instanceof
+               value="org.eclipse.core.resources.IProject">
+           </instanceof>
+           <adapt type="org.eclipse.core.resources.IProject">
+              <test property="org.eclipse.core.resources.projectNature" value="com.hello.uxml.tools.uxmlNature"/>
+           </adapt>
+         </or>
+       </enabledWhen>
+    </page>
+    <page
+        id="com.hello.uxml.tools.ui.internal.properties.UXMLDartSettingsPage"
+         name="UXML DartToX Settings"
+         class="com.hello.uxml.tools.ui.internal.properties.UXMLDartSettingsPage">
+       <enabledWhen>
+         <or>
+           <instanceof
+               value="org.eclipse.core.resources.IProject">
+           </instanceof>
+           <adapt type="org.eclipse.core.resources.IProject">
+              <test property="org.eclipse.core.resources.projectNature" value="com.hello.uxml.tools.uxmlNature"/>
+           </adapt>
+         </or>
+       </enabledWhen>
+    </page>
+  </extension>
+
+  <!-- Project Builder -->
+  <extension
+      id="com.hello.uxml.tools.uxmlBuilder"
+      name="UXML Project Builder"
+      point="org.eclipse.core.resources.builders">
+    <builder hasNature="true">
+      <run class="com.hello.uxml.tools.core.internal.builder.UXMLBuilder"/>
+    </builder>
+  </extension>
+
+  <!-- Project Nature Definition -->
+  <extension
+    id="com.hello.uxml.uxmlNature"
+    name="UXML Project Nature"
+    point="org.eclipse.core.resources.natures">
+    <runtime>
+      <run
+        class="com.hello.uxml.tools.core.internal.model.UXMLNature">
+      </run>
+    </runtime>
+    <builder
+      id="com.hello.uxml.tools.uxmlBuilder">
+    </builder>
+  </extension>
+</plugin>

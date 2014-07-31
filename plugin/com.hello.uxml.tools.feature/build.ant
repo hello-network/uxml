@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="com.google.uxml.tools.feature" default="jar">
+  <target name="jar">
+    <jar destfile="/home/ferhat/www/hello/uxmledit5/eclipse/features/com.google.uxml.tools.feature_3.1.8.jar">
+      <fileset dir=".">
+        <include name="feature.xml"/>
+        <include name="../com.google.uxml.tools.ui/icons/uxmlfile.gif"/>
+      </fileset>
+    </jar>
+  </target>
+</project>
